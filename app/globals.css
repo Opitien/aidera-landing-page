@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Updated color scheme for Aidera - neutral base with electric blue accents */
+    --background: 0 0% 100%; /* Pure white background */
+    --foreground: 222 84% 5%; /* Deep navy text */
+
+    --muted: 210 40% 98%; /* Light gray */
+    --muted-foreground: 215 16% 47%; /* Medium gray */
+    --muted-foreground-light: 215 16% 47% / 0.7;
+    --muted-foreground-dark: 215 16% 47% / 0.8;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 5%;
+
+    /* Updated primary color to darker blue for better contrast */
+    --primary: 217 91% 45%; /* Darker electric blue for better contrast */
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 217 91% 35%;
+    --primary-light: 217 91% 85%;
+
+    /* Secondary accent colors - teal complement */
+    --secondary: 174 72% 56%; /* Teal accent */
+    --secondary-foreground: 222 84% 5%; /* Dark navy instead of white */
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 84% 5%;
+
+    --border: 214 32% 91%;
+    --border-light: 214 32% 91% / 0.5;
+    --border-dark: 214 32% 91% / 0.8;
+
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Dark mode with deep navy background */
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --muted-foreground-light: 215 20% 65% / 0.7;
+    --muted-foreground-dark: 215 20% 65% / 0.8;
+
+    --card: 222 84% 5%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 84% 5%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 84% 5%;
+    --primary-dark: 217 91% 50%;
+    --primary-light: 217 91% 85%;
+
+    --secondary: 174 72% 56%;
+    --secondary-foreground: 0 0% 100%; /* White text on teal in dark mode */
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --border-light: 217 33% 17% / 0.5;
+    --border-dark: 217 33% 17% / 0.8;
+
+    --ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
